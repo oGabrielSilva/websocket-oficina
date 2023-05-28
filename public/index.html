@@ -13,11 +13,12 @@
     rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/scripts/bundle.js" defer></script>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
   <title>Chatapp</title>
 </head>
 
 <body>
-  <section id="get-username" class="d-none">
+  <section id="get-username">
     <div>
       <label>
         Digite um nome de usuário:
@@ -26,9 +27,9 @@
       <button>OK</button>
     </div>
   </section>
-  <section id="chat" class="">
+  <section id="chat" class="d-none">
     <div class="dv">
-      <h1>Tester</h1>
+      <h1 id="p-username">Tester</h1>
     </div>
     <main>
       <!-- <div class="msg">
@@ -44,7 +45,7 @@
     </main>
     <div class="dv">
       <form>
-        <input placeholder="Digite sua mensagem" type="text">
+        <input placeholder="Digite sua mensagem" type="text" id="input-msg">
         <button id="send"><i class="bi bi-send"></i></button>
       </form>
     </div>
