@@ -1,0 +1,136 @@
+:root {
+  --primary: #07060c;
+  --primary-variant: #13121e;
+  --text: #e1e1e1;
+  --title: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: 0;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--text);
+  transition: 0.3s ease-in-out;
+}
+
+body {
+  background: var(--primary);
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--title);
+}
+
+input {
+  background: transparent;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 1rem 0;
+  border-bottom: 2px solid var(--primary-variant);
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+.d-none {
+  display: none !important;
+}
+
+#get-username {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#get-username div {
+  width: 90vw;
+  max-width: 500px;
+  padding: 1rem;
+  border: 2px solid var(--primary-variant);
+  border-radius: 8px;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.dv:first-child {
+  border-bottom: 2px solid var(--primary-variant);
+}
+
+.dv,
+main {
+  width: 90%;
+  max-width: 500px;
+  padding: 1rem;
+  background: var(--primary);
+}
+
+.dv input {
+  margin: 0;
+  border: 1px solid var(--primary-variant);
+}
+
+.dv:last-child {
+  padding: 0.5rem 0 1rem 0;
+}
+
+.dv:last-child form {
+  display: flex;
+}
+
+.dv:last-child form button {
+  padding: 0 0.5rem;
+  background: var(--primary-variant);
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.msg {
+  background: var(--primary-variant);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.msg.me {
+  text-align: end;
+  margin-left: auto;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-variant);
+  border-radius: 5px;
+}
